@@ -1,0 +1,21 @@
+{
+  "name": "Odoo Development",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [8069],
+  "extensions": [
+    "ms-python.python",
+    "ms-azuretools.vscode-docker"
+  ],
+  "postCreateCommand": "pip install -r requirements.txt",
+  "remoteEnv": {
+    "PGHOST": "localhost",
+    "PGUSER": "odoo",
+    "PGPASSWORD": "odoo",
+    "PGDATABASE": "odoo"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "/bin/bash"
+  }
+}
